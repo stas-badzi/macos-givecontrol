@@ -4,7 +4,7 @@ A small shell script requiering sudo for giving a macos application permission t
 # Instalation
 Download and move into `/usr/local/bin` and run it by `give-control` (you might need  to run `chmod +x give-control` on it) or just start it by `sh ./give-control`
 
-# Using
+# Usage
 ```
 give-control path/to/executable
 ```
