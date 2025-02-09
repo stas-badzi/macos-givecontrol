@@ -18,7 +18,7 @@ then
 else
 	f="$(pwd)/$1"
 fi
-cat "$f" 2> /dev/null > /dev/null
+ls "$f" 2> /dev/null > /dev/null
 if [ $? -ne 0 ]
 then
 	echo "File $f not found"
