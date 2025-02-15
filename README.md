@@ -2,7 +2,7 @@
 ### A small shell script requiering sudo for giving a macos application permission to control the computer eg. read &amp; write keyboard events
 
 ## Instalation
-Download and move into `/usr/local/bin` and run it by `give-control` (you might need  to run `chmod +x give-control` on it) or just start it by `sh ./give-control`
+Download and move into `/usr/local/bin` and run it by `give-control` or just start it by `path/to/script/give-control`
 
 ## Usage
 ```
