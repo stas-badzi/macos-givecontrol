@@ -8,7 +8,7 @@ Download and move into `/usr/local/bin` and run it by `give-control` or just sta
 ```
 give-control path/to/executable
 ```
-where _path/to/executable_ should be an absolute or relative path to a runnable file or application folder excluding paths in the form of `/begining/of/path/../rest/of/path`, `../path/from/parent`, `~/../user2/path` or any other containing the `..` subdirectory.
+where _path/to/executable_ should be an absolute or relative path to a runnable file or application folder excluding paths in the form of `/begining/of/path/../rest/of/path`, `../path/from/parent`, `~/../user2/path` or any other containing the `..` subdirectory. Paths with double slashes `//` may also not be parsed correctly.
 
 For example: `./HelloWorld`, `/Applications/iTerm.app`, `~/Documents/prog/main.bin`, `apps/snake.app`, `flappy-bitd`
 
