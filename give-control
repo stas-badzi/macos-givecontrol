@@ -41,10 +41,15 @@ echo "$f"
 echo "$REQ_HEX"
 __DATE=$(date +%s)
 __AUTHVAL=0
+__DATEANDON=$__DATE
+if [ $(sw_vers -productVersion | cut -d '.' -f 1) -gt 13 ]
+then
+	__DATEANDON=$__DATE,NULL,NULL,'',$__DATE
+if
 $Do_Enable && __AUTHVAL=2
 sudo sqlite3 /Library/Application\ Support/com.apple.TCC/TCC.db "
         DELETE FROM \"access\" where client = '$f' and service = '$Enable_Setting';
         DELETE FROM \"access\" where csreq = X'$REQ_HEX' and service = '$Enable_Setting';
-        INSERT INTO \"access\" VALUES('$Enable_Setting','$f',$__NUM,$__AUTHVAL,4,1,X'$REQ_HEX',NULL,0,0,NULL,0,$__DATE,NULL,NULL,'',$__DATE)
+        INSERT INTO \"access\" VALUES('$Enable_Setting','$f',$__NUM,$__AUTHVAL,4,1,X'$REQ_HEX',NULL,0,0,NULL,0,$__DATEANDON)
 "
 
